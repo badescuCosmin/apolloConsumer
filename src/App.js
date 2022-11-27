@@ -1,5 +1,11 @@
+import { Posts } from "./components";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Posts />
+    </>
+  );
 }
 
 export default App;
