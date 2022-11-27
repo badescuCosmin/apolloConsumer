@@ -1,13 +1,12 @@
 import { Audio } from "react-loader-spinner";
 
+//just to demonstrate the loading state;
 export const Loading = () => (
   <Audio
-    height="80"
-    width="80"
-    radius="9"
-    color="green"
+    height="180"
+    width="180"
+    color="black"
     ariaLabel="loading"
-    wrapperStyle
-    wrapperClass
+    wrapperStyle={{ marginLeft: "300px", marginTop: "100px" }}
   />
 );

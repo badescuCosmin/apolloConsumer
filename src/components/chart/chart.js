@@ -6,11 +6,8 @@ import {
   Tooltip,
   Axis,
 } from "@visx/xychart";
-
-const accessors = {
-  xAccessor: (d) => d.x,
-  yAccessor: (d) => d.posts,
-};
+import { accessors } from "./accessors";
+import { Tooltip as ChartTooltip } from "./tooltip";
 
 export const Chart = ({ data }) => (
   <XYChart
@@ -30,14 +27,7 @@ export const Chart = ({ data }) => (
       showVerticalCrosshair
       showSeriesGlyphs
       renderTooltip={({ tooltipData, colorScale }) => (
-        <div>
-          <div style={{ color: colorScale(tooltipData.nearestDatum.key) }}>
-            {tooltipData.nearestDatum.key}
-          </div>
-          {accessors.xAccessor(tooltipData.nearestDatum.datum)}
-          {", "}
-          {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-        </div>
+        <ChartTooltip tooltipData={tooltipData} colorScale={colorScale} />
       )}
     />
   </XYChart>
