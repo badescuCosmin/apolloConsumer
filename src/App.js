@@ -1,11 +1,7 @@
 import { Posts } from "./components";
 
 function App() {
-  return (
-    <>
-      <Posts />
-    </>
-  );
+  return <Posts />;
 }
 
 export default App;

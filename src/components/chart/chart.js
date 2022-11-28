@@ -1,5 +1,5 @@
 import {
-  AnimatedAxis, // any of these can be non-animated equivalents
+  AnimatedAxis,
   AnimatedGrid,
   AnimatedLineSeries,
   XYChart,
